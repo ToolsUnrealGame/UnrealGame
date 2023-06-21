@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Unreal_GameEditor Editor Win64 Development (Unreal_Game)",
+            "compilerPath": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "msvc-x64",
+            "compileCommands": "C:\\Unreal\\Unreal_Game\\.vscode\\compileCommands_Unreal_Game.json"
+        },
+        {
+            "name": "Win32",
+            "compilerPath": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "msvc-x64",
+            "compileCommands": "C:\\Unreal\\Unreal_Game\\.vscode\\compileCommands_Default.json"
+        }
+    ],
+    "version": 4
+}
