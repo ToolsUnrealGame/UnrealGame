@@ -1,5 +1,53 @@
 [
 	{
+		"file": "C:\\Unreal\\Unreal_Game\\Source\\Unreal_Game\\Private\\AutomaticDoors.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Unreal\\Unreal_Game\\.vscode\\compileCommands_Unreal_Game\\Unreal_Game.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Unreal\\Unreal_Game\\Source\\Unreal_Game\\Private\\TouchRecognition.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Unreal\\Unreal_Game\\.vscode\\compileCommands_Unreal_Game\\Unreal_Game.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Unreal\\Unreal_Game\\Source\\Unreal_Game\\Private\\TransferCollision.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Unreal\\Unreal_Game\\.vscode\\compileCommands_Unreal_Game\\Unreal_Game.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Unreal\\Unreal_Game\\Source\\Unreal_Game\\Public\\AutomaticDoors.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Unreal\\Unreal_Game\\.vscode\\compileCommands_Unreal_Game\\Unreal_Game.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Unreal\\Unreal_Game\\Source\\Unreal_Game\\Public\\TouchRecognition.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Unreal\\Unreal_Game\\.vscode\\compileCommands_Unreal_Game\\Unreal_Game.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
+		"file": "C:\\Unreal\\Unreal_Game\\Source\\Unreal_Game\\Public\\TransferCollision.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe",
+			"@C:\\Unreal\\Unreal_Game\\.vscode\\compileCommands_Unreal_Game\\Unreal_Game.255.rsp"
+		],
+		"directory": "C:\\Program Files\\Epic Games\\UE_5.1\\Engine\\Source"
+	},
+	{
 		"file": "C:\\Unreal\\Unreal_Game\\Source\\Unreal_Game\\TP_PickUpComponent.cpp",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe",
