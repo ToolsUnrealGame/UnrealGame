@@ -2,7 +2,9 @@
 
 
 #include "TransferCollision.h"
-#include "TouchRecognition.h"
+#include "ReactPlatform.h"
+#include"ReceiveCollsion.h"
+#include"MovingPlatform.h"
 
 // Sets default values for this component's properties
 UTransferCollision::UTransferCollision()
@@ -14,22 +16,48 @@ UTransferCollision::UTransferCollision()
 }
 
 
-// Called when the game starts
-void UTransferCollision::BeginPlay()
-{
-	Super::BeginPlay();
-	
-}
-
 void UTransferCollision::TransferCollisionToPlatform(bool IsCollide)
 {
-	for(AActor* Platform : TargetPlatforms){
-		UTouchRecognition* PlatformComponent = Platform->FindComponentByClass<UTouchRecognition>();
-		if(!PlatformComponent){
-			FString ActorName=GetOwner()->GetActorNameOrLabel();
-			UE_LOG(LogTemp, Display, TEXT("\"%s\" doesn't have PlatformComponent"),*ActorName);
-			return;
+	for (AActor* Platform : TargetPlatforms) {
+		TArray<IReceiveCollsion*> ReceiveCollisions = GetReceiveCollision(Platform);
+
+		for (IReceiveCollsion* ReceiveCollision : ReceiveCollisions) {
+			if (ReceiveCollision) {
+				ReceiveCollision->ActivateCollision(GetOwner(), IsCollide);
+			}
 		}
-		PlatformComponent->ActivatePlatform(IsCollide);
 	}
+}
+
+void UTransferCollision::ToggleCollisionPlatform() {
+	for (AActor* Platform : TargetPlatforms) {
+		TArray<IReceiveCollsion*> ReceiveCollisions = GetReceiveCollision(Platform);
+
+		for (IReceiveCollsion* ReceiveCollision : ReceiveCollisions) {
+			if (ReceiveCollision) {
+				bool bNowCollided =ReceiveCollision->IsCollided(GetOwner());
+				ReceiveCollision->ActivateCollision(GetOwner(), !bNowCollided);
+			}
+		}
+	}
+}
+
+TArray<IReceiveCollsion*> UTransferCollision::GetReceiveCollision(AActor* Platform) const{
+
+	TSet< UActorComponent*> ActorComponents = Platform->GetComponents();
+	TArray<IReceiveCollsion*> ret = TArray<IReceiveCollsion*>();
+
+	for (UActorComponent* ActorComponent : ActorComponents) {
+		IReceiveCollsion* InterfaceReceiveCol = Cast<IReceiveCollsion>(ActorComponent);
+
+		if (!InterfaceReceiveCol) {
+			FString ActorName = Platform->GetActorNameOrLabel();
+			UE_LOG(LogTemp, Display, TEXT("\"%s\" doesn't have IReceiveCollsion"), *ActorName);
+			continue;
+		}
+
+		ret.Add(InterfaceReceiveCol);
+	}
+
+	return ret;
 }
